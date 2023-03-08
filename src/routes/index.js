@@ -12,7 +12,7 @@ const __dirname = dirname(__filename);
 const router = Router()
 
 router.get('/', (req, res) => {
-    res.sendFile(join(__dirname, "../views/signup.html"));
+    res.send("bienvenidos a mi sitio");
 })
 
 router
