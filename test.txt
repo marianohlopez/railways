@@ -1,0 +1,2 @@
+no se observa disminución del size entre las rutas info e info-uncomp
+
