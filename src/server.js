@@ -111,7 +111,7 @@ if (cluster.isPrimary && params.mode.toUpperCase() === 'CLUSTER') {
     console.log("Database connected!");
 
     const expressServer = app.listen(process.env.PORT || 3000, () => {
-        console.log(`server listening port ${params.port}`);
+        console.log(`server listening port ${process.env.PORT}`);
     })
 
     const io = new IOServer(expressServer);
