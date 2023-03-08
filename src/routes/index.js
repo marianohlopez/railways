@@ -4,8 +4,16 @@ import { authController } from "../controllers/index.js";
 import compression from 'compression';
 import generateFaker from '../faker.js';
 import logger from '../lib/logger.js';
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const router = Router()
+
+router.get('/', (req, res) => {
+    res.sendFile(join(__dirname, "../views/signup.html"));
+})
 
 router
     .route('/login')
