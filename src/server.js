@@ -110,7 +110,7 @@ if (cluster.isPrimary && params.mode.toUpperCase() === 'CLUSTER') {
     await mongoose.connect("mongodb://localhost:27017/user");
     console.log("Database connected!");
 
-    const expressServer = app.listen(params.port, () => {
+    const expressServer = app.listen(process.env.PORT || 3000, () => {
         console.log(`server listening port ${params.port}`);
     })
 
